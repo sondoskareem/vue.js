@@ -2053,7 +2053,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         paid_price: "",
         total_price: "",
         status: "",
-        user_id: ""
+        user_id: 0
       }),
       alert: "",
       id: '',
@@ -2075,6 +2075,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           });
         });
       } else {
+        console.log(this.form);
         this.form.post("/sessions").then(function (res) {
           return _this.$router.push({
             path: "/get/sessions",
@@ -39694,6 +39695,9 @@ var render = function() {
                                   ],
                                   staticClass: "form-control",
                                   on: {
+                                    input: function($event) {
+                                      return _vm.form.errors.clear("user_id")
+                                    },
                                     change: function($event) {
                                       var $$selectedVal = Array.prototype.filter
                                         .call($event.target.options, function(
@@ -39730,9 +39734,14 @@ var render = function() {
                                   ),
                                   _vm._v(" "),
                                   _vm._l(_vm.users, function(user) {
-                                    return _c("option", { key: user.id }, [
-                                      _vm._v(_vm._s(user.name))
-                                    ])
+                                    return _c(
+                                      "option",
+                                      {
+                                        key: user.id,
+                                        domProps: { value: user.id }
+                                      },
+                                      [_vm._v(_vm._s(user.name))]
+                                    )
                                   })
                                 ],
                                 2
@@ -39780,6 +39789,9 @@ var render = function() {
                                   ],
                                   staticClass: "form-control",
                                   on: {
+                                    input: function($event) {
+                                      return _vm.form.errors.clear("status")
+                                    },
                                     change: function($event) {
                                       var $$selectedVal = Array.prototype.filter
                                         .call($event.target.options, function(
@@ -39873,19 +39885,21 @@ var render = function() {
                                 },
                                 domProps: { value: _vm.form.date },
                                 on: {
-                                  keydown: function($event) {
-                                    return _vm.form.errors.clear("date")
-                                  },
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
+                                  input: [
+                                    function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.form,
+                                        "date",
+                                        $event.target.value
+                                      )
+                                    },
+                                    function($event) {
+                                      return _vm.form.errors.clear("date")
                                     }
-                                    _vm.$set(
-                                      _vm.form,
-                                      "date",
-                                      $event.target.value
-                                    )
-                                  }
+                                  ]
                                 }
                               }),
                               _vm._v(" "),

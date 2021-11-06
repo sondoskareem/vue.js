@@ -29,9 +29,9 @@
                         <label class="col-sm-6 col-form-label" for="user_id"
                           >User</label
                         >
-                       <select class="form-control" v-model="form.user_id">
+                       <select class="form-control" v-model="form.user_id" @input="form.errors.clear('user_id')">
                             <option value="" selected disabled>Choose</option>
-                            <option v-for="user in users" :key="user.id" >{{ user.name }}</option>
+                            <option v-for="user in users" :key="user.id" v-bind:value="user.id">{{ user.name }}</option>
                         </select>
                         <div
                           v-if="form.errors.has('user_id')" class="text-danger mt-2"> {{ form.errors.get("user_id") }}
@@ -44,7 +44,7 @@
                         <label class="col-sm-6 col-form-label" for="status"
                           >Status</label
                         >
-                       <select class="form-control" v-model="form.status" >
+                       <select class="form-control" v-model="form.status" @input="form.errors.clear('status')">
                             <option value="" selected disabled>Choose</option>
                             <option  value="pending" >Pending</option>
                             <option  value="finished" >Finished</option>
@@ -66,7 +66,7 @@
                           id="date"
                           placeholder="Select date"
                           v-model="form.date"
-                          @keydown="form.errors.clear('date')"
+                          @input="form.errors.clear('date')"
                           lazy
                         />
                         <div
@@ -158,7 +158,7 @@ export default {
         paid_price: "",
         total_price: "",
         status: "",
-        user_id: "",
+        user_id: 0
       }),
       alert: "",
       id:'',
@@ -178,6 +178,7 @@ export default {
             })
           );
       } else {
+          console.log(this.form)
         this.form
           .post("/sessions")
           .then((res) =>

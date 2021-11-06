@@ -32,6 +32,7 @@ class SessionRequest extends FormRequest
                 'paid_price' => "nullable|string",
                 'status' => "nullable|string",
                 'section_id' =>  'nullable|exists:sections,id',
+                'user_id' =>  'nullable|exists:users,id',
             ];
 
 
@@ -44,6 +45,7 @@ class SessionRequest extends FormRequest
                 'paid_price' => "required|string",
                 'status' => "required|string",
                 'section_id' =>  'required|exists:sections,id',
+                'user_id' =>  'required|exists:users,id',
             ];
 
 
