@@ -110,24 +110,7 @@ class Form {
         });
     }
 
-    getData(requestType, url) {
-        return url;
-        // return new Promise((resolve, reject) => {
-        //     axios[requestType](url)
-        //         .then(response => {
-        //             console.log('qqq' + response)
-
-        //             // this.onSuccess(response.data);
-
-        //             resolve(response.data);
-        //         })
-        //         .catch(error => {
-        //             this.onFail(error.response.data);
-
-        //             reject(error.response.data);
-        //         });
-        // });
-    }
+   
 
     /**
      * Handle a successful form submission.

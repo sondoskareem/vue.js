@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
-import users from './components/Users/index.vue'
-import create_user from './components/Users/create.vue'
+import Users from './components/Users/index.vue'
+import Sessions from './components/Sessions/index.vue'
+import CreateUser from './components/Users/create.vue'
 
 const routes=[
     {
@@ -12,15 +13,20 @@ const routes=[
     },
     {
         path:'/get/users',
-        component:users
+        component:Users
     },
     {
         path:'/usercreate',
-        component:create_user
+        component:CreateUser
     },
     {
         path:'/usercreate/:id',
-        component:create_user
+        component:CreateUser
+    },
+
+    {
+        path:'/sessions/user/:id',
+        component:Sessions
     }
 
 ]

@@ -13,12 +13,12 @@
 							<div class="col-lg-6">
 								<div class="card-body p-md-5">
 									<div class="text-center">
-										{{-- <img src="app-assets/images/beirut-login.jpg" width="200" alt=""> --}}
+										{{-- <img src="app-assets/images/vue.png" width="200" alt=""> --}}
 										<h3 class="mt-4 font-weight-bold">Welcome Back</h3>
 									</div>
 									<form method="POST" action="{{ route('login') }}">
 										@csrf
-				
+
 										{{-- <div class="input-group shadow-sm rounded mt-5">
 											<div class="input-group-prepend">	<span class="input-group-text bg-transparent border-0 cursor-pointer"><img src="assets/images/icons/search.svg" alt="" width="16"></span>
 											</div>
@@ -64,7 +64,7 @@
 											</ul>
 										</div>
 									@endif
-									
+
 										<div class="form-row">
 											<div class="form-group col">
 												<div class="custom-control custom-switch">
@@ -72,7 +72,7 @@
 													<label class="custom-control-label" for="customSwitch1">Remember Me</label>
 												</div>
 											</div>
-											
+
 										</div>
 										<div class="btn-group mt-3 w-100">
 											<button type="submit" class="btn btn-primary btn-block">Log In</button>
@@ -86,10 +86,10 @@
 										</div>
 									</form>
 								</div>
-								
+
 							</div>
 							<div class="col-lg-6">
-								<img src="app-assets/images/beirut-login.jpg" class="card-img login-img h-100"  alt="..." >
+								<img src="app-assets/images/vue.png" class="card-img login-img h-100"  alt="..." >
 							</div>
 						</div>
 						<!--end row-->

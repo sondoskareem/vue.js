@@ -22,17 +22,17 @@
                             type="button"
                             class="btn btn-primary m-1 mb-4 radius-30 px-5"
                         >
-                            <i class="bx bx-user mr-1"></i>New User
+                            <i class="bx bx-user mr-1"></i>New Session
                         </button>
                     </router-link>
                 </div>
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title ">
-                            <h4 class="mb-0">User</h4>
+                            <h4 class="mb-0">Session</h4>
                         </div>
                         <hr />
-                        <div class="table-responsive" v-if="users.length">
+                        <div class="table-responsive" v-if="sessions.length">
                             <table
                                 id="example2"
                                 class="table table-striped table-bordered"
@@ -100,23 +100,23 @@ export default {
             form: new Form(),
             data: {},
             alert: "",
-            users: [],
-            delete_item:''
+            sessions: [],
+            delete_item_id:''
         };
     },
 
     methods: {
         toggleDelete(id){
-            this.delete_item = id
+            this.delete_item_id = id
             $('#delete').modal('show');
         },
         remove(){
             console.log('hsss')
-            console.log(this.delete_item)
+            console.log(this.delete_item_id)
         this.form
-          .delete(`/users/${this.delete_item}`)
+          .delete(`/users/${this.delete_item_id}`)
           .then( (res) =>{
-             const projectIndex = this.users.findIndex(item => item.id === this.delete_item)
+             const projectIndex = this.users.findIndex(item => item.id === this.delete_item_id)
             this.users.splice(projectIndex, 1)
             $("#delete").modal('hide');
           });
