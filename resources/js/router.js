@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
+
 import Users from './components/Users/index.vue'
-import Sessions from './components/Sessions/index.vue'
 import CreateUser from './components/Users/create.vue'
+
+import Sessions from './components/Sessions/index.vue'
+import PostSessions from './components/Sessions/create.vue'
 
 const routes=[
     {
@@ -25,8 +28,12 @@ const routes=[
     },
 
     {
-        path:'/sessions',
+        path:'/get/sessions',
         component:Sessions
+    },
+    {
+        path:'/post/sessions',
+        component:PostSessions
     }
 
 ]

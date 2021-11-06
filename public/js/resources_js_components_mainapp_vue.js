@@ -202,7 +202,7 @@ var render = function() {
             _c(
               "li",
               [
-                _c("router-link", { attrs: { to: "/sessions" } }, [
+                _c("router-link", { attrs: { to: "/get/sessions" } }, [
                   _c("div", { staticClass: "parent-icon icon-color-2" }, [
                     _c("i", { staticClass: "bx bx-category" })
                   ]),

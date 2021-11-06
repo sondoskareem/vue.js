@@ -17,80 +17,109 @@
             <div class="card radius-15">
               <div class="card-body">
                 <div class="card-title">
-                  <h4 class="mb-0">New User</h4>
+                  <h4 class="mb-0">New Session</h4>
                 </div>
                 <hr />
 
                 <form method="POST" @submit.prevent="onSubmit">
                   <div class="form-body">
+
                     <div class="form-row mb-2">
                       <div class="col-sm-10">
-                        <label class="col-sm-6 col-form-label" for="name"
-                          >Name</label
+                        <label class="col-sm-6 col-form-label" for="user_id"
+                          >User</label
                         >
-                        <input
-                          name="name"
-                          class="form-control"
-                          type="text"
-                          id="name"
-                          placeholder="Enter the name"
-                          v-model="form.name"
-                          @keydown="form.errors.clear('name')"
-                          lazy
-                        />
+                       <select class="form-control" v-model="form.user_id">
+                            <option value="" selected disabled>Choose</option>
+                            <option v-for="user in users" :key="user.id" >{{ user.name }}</option>
+                        </select>
                         <div
-                          v-if="form.errors.has('name')"
-                          class="text-danger mt-2"
-                        >
-                          {{ form.errors.get("name") }}
+                          v-if="form.errors.has('user_id')" class="text-danger mt-2"> {{ form.errors.get("user_id") }}
                         </div>
                       </div>
                     </div>
 
                     <div class="form-row mb-2">
                       <div class="col-sm-10">
-                        <label class="col-sm-6 col-form-label" for="email"
-                          >Email</label
+                        <label class="col-sm-6 col-form-label" for="status"
+                          >Status</label
                         >
-                        <input
-                          name="email"
-                          class="form-control"
-                          type="text"
-                          id="email"
-                          placeholder="Enter the Email"
-                          v-model="form.email"
-                          @keydown="form.errors.clear('email')"
-                          lazy
-                        />
+                       <select class="form-control" v-model="form.status" >
+                            <option value="" selected disabled>Choose</option>
+                            <option  value="pending" >Pending</option>
+                            <option  value="finished" >Finished</option>
+                        </select>
                         <div
-                          v-if="form.errors.has('email')"
-                          class="text-danger mt-2"
-                        >
-                          {{ form.errors.get("email") }}
+                          v-if="form.errors.has('status')" class="text-danger mt-2">{{ form.errors.get("status") }}
                         </div>
                       </div>
                     </div>
 
                     <div class="form-row mb-2">
                       <div class="col-sm-10">
-                        <label class="col-sm-6 col-form-label" for="password"
-                          >password</label
+                        <label class="col-sm-6 col-form-label" for="date"
+                          >Date</label
                         >
                         <input
-                          name="password"
                           class="form-control"
-                          type="text"
-                          id="password"
-                          placeholder="Enter the password"
-                          v-model="form.password"
-                          @keydown="form.errors.clear('password')"
+                          type="datetime-local"
+                          id="date"
+                          placeholder="Select date"
+                          v-model="form.date"
+                          @keydown="form.errors.clear('date')"
                           lazy
                         />
                         <div
-                          v-if="form.errors.has('password')"
+                          v-if="form.errors.has('date')"
                           class="text-danger mt-2"
                         >
-                          {{ form.errors.get("password") }}
+                          {{ form.errors.get("date") }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-row mb-2">
+                      <div class="col-sm-10">
+                        <label class="col-sm-6 col-form-label" for="total_price"
+                          >total_price</label
+                        >
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="total_price"
+                          placeholder="Enter the total_price"
+                          v-model="form.total_price"
+                          @keydown="form.errors.clear('total_price')"
+                          lazy
+                        />
+                        <div
+                          v-if="form.errors.has('total_price')"
+                          class="text-danger mt-2"
+                        >
+                          {{ form.errors.get("total_price") }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-row mb-2">
+                      <div class="col-sm-10">
+                        <label class="col-sm-6 col-form-label" for="paid_price"
+                          >paid_price</label
+                        >
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="paid_price"
+                          placeholder="Enter the paid_price"
+                          v-model="form.paid_price"
+                          @keydown="form.errors.clear('paid_price')"
+                          lazy
+                        />
+                        <div
+                          v-if="form.errors.has('paid_price')"
+                          class="text-danger mt-2"
+                        >
+                          {{ form.errors.get("paid_price") }}
                         </div>
                       </div>
                     </div>
@@ -125,32 +154,36 @@ export default {
   data() {
     return {
       form: new Form({
-        email: "",
-        name: "",
-        password: "",
+        date: "",
+        paid_price: "",
+        total_price: "",
+        status: "",
+        user_id: "",
       }),
       alert: "",
-      id:''
+      id:'',
+      users:[]
     };
   },
   methods: {
     onSubmit() {
-      if (this.$route.path.split('/')[2]) {
+      if (this.id) {
+          console.log(this.id)
         this.form
-          .put("/users")
+          .put(`/sessions/${this.id}`)
           .then((res) =>
             this.$router.push({
-              path: "/get/users",
-              query: { alert: "Employee Updated" },
+              path: "/get/sessions",
+              query: { alert: "Session Updated" },
             })
           );
       } else {
         this.form
-          .post("/users")
+          .post("/sessions")
           .then((res) =>
             this.$router.push({
-              path: "/get/users",
-              query: { alert: "Employee Added" },
+              path: "/get/sessions",
+              query: { alert: "Session Added" },
             })
           );
       }
@@ -159,17 +192,13 @@ export default {
 
   async created() {
     this.$route.query.alert ? (this.alert = this.$route.query.alert) : null;
-    if (this.$route.path.split('/')[2] ) {
-       this.id = this.$route.path.split('/')[2]
-    this.form
-          .get(`/users/${this.id}`)
-          .then( (res) =>{
-            this.form.email = res.email
-            this.form.name = res.name
-            console.log(res)
-            console.log(this.form)
-          });
+    if (this.$route.params.id ) {
+    this.id = this.$route.params.id
+    this.form.get(`/sessions/${this.id}`).then( (res) =>{  });
+
     }
+    this.form.get(`/users/`).then( (res) =>{this.users = res });
+
   },
   components: {
     Alert,

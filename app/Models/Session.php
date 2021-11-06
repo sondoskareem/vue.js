@@ -9,11 +9,11 @@ use Illuminate\Database\Eloquent\softDeletes;
 class Session extends Model
 {
     use HasFactory;
-    use SoftDeletes;
 
     public $guarded = [];
+    protected $table = 'sessions';
 
-protected $dates = [ 'created_at', 'date' ];
+    protected $dates = [ 'created_at', 'date' ];
 
     public function user(){
         return $this->belongsTo(User::class , 'user_id');

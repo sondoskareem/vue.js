@@ -17,7 +17,7 @@
                 <Alert v-if="alert" v-bind:message="alert" />
 
                 <div>
-                    <router-link to="/usercreate">
+                    <router-link to="/post/sessions">
                         <button
                             type="button"
                             class="btn btn-primary m-1 mb-4 radius-30 px-5"
@@ -40,44 +40,43 @@
                             >
                                 <thead>
                                     <tr>
+                                        <th class="text-center">id</th>
                                         <th class="text-center">users name</th>
                                         <th class="text-center">users email</th>
-                                        <th class="text-center">created ay</th>
+                                        <th class="text-center">session date</th>
+                                        <th class="text-center">session status</th>
+                                        <th class="text-center">total price</th>
+                                        <th class="text-center">paid price</th>
+                                        <th class="text-center">created at</th>
                                         <th class="text-center"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr
-                                        v-for="(user, i) in users"
-                                        :key="i">
+                                    <tr v-for="(session, i) in sessions" :key="i">
 
-                                        <td class="text-center">
-                                            {{ user.name }}
-                                        </td>
-                                        <td class="text-center">
-                                            {{ user.email }}
-                                        </td>
-                                        <td class="text-center">
-                                            {{ user.created_at }}
-                                        </td>
+                                        <td class="text-center">{{ session.id }}</td>
+                                        <td class="text-center">{{ session.user.name }}</td>
+                                        <td class="text-center">{{ session.user.email }}</td>
+                                        <td class="text-center">{{ session.date }}</td>
+                                        <td class="text-center">{{ session.status }}</td>
+                                        <td class="text-center">{{ session.total_price }}</td>
+                                        <td class="text-center">{{ session.paid_price }}</td>
+                                        <td class="text-center">{{ session.created_at }}</td>
+
+
                                         <td>
-                                            <router-link :to="`/usercreate/${user.id}`" >
+                                            <router-link :to="`/post/sessions/${session.id}`" >
                                                 <a href=""><button style="border: none">
                                                     <i class="bx bx-edit" style="font-size: 12px;cursor:pointer;margin-right:5px" >
                                                 </i></button></a>
                                             </router-link>
 
-                                             <router-link :to="`/sessions/user/${user.id}`" >
-                                                <a href=""><button style="border: none">
-                                                    <i class="lni lni-timer" style="font-size: 12px;cursor:pointer;margin-right:5px" >
-                                                </i></button></a>
-                                            </router-link>
 
                                             <button
                                                 style="border: none"
                                                 type="button"
                                                 class="delete"
-                                                @click="toggleDelete(user.id)">
+                                                @click="toggleDelete(session.id)">
                                                 <i class="bx bx-trash" style="font-size: 12px; cursor:pointer;"></i>
                                             </button>
                                         </td>
@@ -114,10 +113,10 @@ export default {
             console.log('hsss')
             console.log(this.delete_item_id)
         this.form
-          .delete(`/users/${this.delete_item_id}`)
+          .delete(`/sessions/${this.delete_item_id}`)
           .then( (res) =>{
-             const projectIndex = this.users.findIndex(item => item.id === this.delete_item_id)
-            this.users.splice(projectIndex, 1)
+             const projectIndex = this.sessions.findIndex(item => item.id === this.delete_item_id)
+            this.sessions.splice(projectIndex, 1)
             $("#delete").modal('hide');
           });
         }
@@ -131,9 +130,10 @@ export default {
         }
 
         this.form
-          .get(`/users`)
+          .get(`/sessions`)
           .then( (res) =>{
-            this.users = res;
+            this.sessions = res;
+            console.log(res)
           });
     }
 };

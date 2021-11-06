@@ -160,8 +160,8 @@ export default {
 
   async created() {
     this.$route.query.alert ? (this.alert = this.$route.query.alert) : null;
-    if (this.$route.path.split('/')[2] ) {
-       this.id = this.$route.path.split('/')[2]
+    if (this.$route.params.id ) {
+       this.id = this.$route.params.id
     this.form
           .get(`/users/${this.id}`)
           .then( (res) =>{

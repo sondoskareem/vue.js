@@ -67,12 +67,6 @@
                                                 </i></button></a>
                                             </router-link>
 
-                                             <router-link :to="`/sessions/user/${user.id}`" >
-                                                <a href=""><button style="border: none">
-                                                    <i class="lni lni-timer" style="font-size: 12px;cursor:pointer;margin-right:5px" >
-                                                </i></button></a>
-                                            </router-link>
-
                                             <button
                                                 style="border: none"
                                                 type="button"

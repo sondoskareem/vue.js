@@ -30,7 +30,7 @@
             </li>
 
              <li>
-                <router-link to="/sessions">
+                <router-link to="/get/sessions">
                     <div class="parent-icon icon-color-2"><i class='bx bx-category'></i></div>
                     <div class="menu-title">Sessions</div>
                 </router-link>
