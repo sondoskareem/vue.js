@@ -11,17 +11,21 @@ const routes=[
         name: 'welcome',
     },
     {
-        path:'/users',
+        path:'/get/users',
         component:users
     },
     {
         path:'/usercreate',
         component:create_user
+    },
+    {
+        path:'/usercreate/:id',
+        component:create_user
     }
 
 ]
 
-export const router =  new VueRouter({
+export const routers =  new VueRouter({
     mode:'history',
     routes
 })

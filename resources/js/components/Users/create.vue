@@ -1,162 +1,178 @@
 <template>
-    
-<div class="page-wrapper" >
-	<div class="page-content-wrapper">
-		<div class="page-content">
-		<Alert v-if="alert" v-bind:message="alert" />
+  <div class="page-wrapper">
+    <div class="page-content-wrapper">
 
-		<div class="row">
-			<div class="col-12 col-lg-9 mx-auto">
-				<a href="#"><button
-					type="button"
-					class="btn btn-primary m-1 mb-4 radius-30 px-5">
-					<i class='bx bx-arrow-back mr-1'></i>Back
-				</button></a>
-				<div class="card radius-15">
-					<div class="card-body">
-						<div class="card-title">
-							<h4 class="mb-0">New User</h4>
-						</div>
-						<hr/>
-						<form method="POST" >
+      <div class="page-content">
+        <Alert v-if="alert" v-bind:message="alert" />
+        <div class="row">
+          <div class="col-12 col-lg-9 mx-auto">
+            <router-link to="/get/users">
+              <button
+                type="button"
+                class="btn btn-primary m-1 mb-4 radius-30 px-5"
+              >
+                <i class="bx bx-user mr-1"></i>Back
+              </button>
+            </router-link>
+            <div class="card radius-15">
+              <div class="card-body">
+                <div class="card-title">
+                  <h4 class="mb-0">New User</h4>
+                </div>
+                <hr />
 
-							<div class="form-body ">
+                <form method="POST" @submit.prevent="onSubmit">
+                  <div class="form-body">
+                    <div class="form-row mb-2">
+                      <div class="col-sm-10">
+                        <label class="col-sm-6 col-form-label" for="name"
+                          >Name</label
+                        >
+                        <input
+                          name="name"
+                          class="form-control"
+                          type="text"
+                          id="name"
+                          placeholder="Enter the name"
+                          v-model="form.name"
+                          @keydown="form.errors.clear('name')"
+                          lazy
+                        />
+                        <div
+                          v-if="form.errors.has('name')"
+                          class="text-danger mt-2"
+                        >
+                          {{ form.errors.get("name") }}
+                        </div>
+                      </div>
+                    </div>
 
-								<div class="form-row mb-2">
-									<div class="col-sm-10">
-										<label class="col-sm-6 col-form-label"for="name">Name</label>
+                    <div class="form-row mb-2">
+                      <div class="col-sm-10">
+                        <label class="col-sm-6 col-form-label" for="email"
+                          >Email</label
+                        >
+                        <input
+                          name="email"
+                          class="form-control"
+                          type="text"
+                          id="email"
+                          placeholder="Enter the Email"
+                          v-model="form.email"
+                          @keydown="form.errors.clear('email')"
+                          lazy
+                        />
+                        <div
+                          v-if="form.errors.has('email')"
+                          class="text-danger mt-2"
+                        >
+                          {{ form.errors.get("email") }}
+                        </div>
+                      </div>
+                    </div>
 
-										<input 
-										name="name"
-										type="text"
-										class="form-control"
-										id="name"
-										placeholder="Enter the name"
-										v-model="data.name"
-										>
+                    <div class="form-row mb-2">
+                      <div class="col-sm-10">
+                        <label class="col-sm-6 col-form-label" for="password"
+                          >password</label
+                        >
+                        <input
+                          name="password"
+                          class="form-control"
+                          type="text"
+                          id="password"
+                          placeholder="Enter the password"
+                          v-model="form.password"
+                          @keydown="form.errors.clear('password')"
+                          lazy
+                        />
+                        <div
+                          v-if="form.errors.has('password')"
+                          class="text-danger mt-2"
+                        >
+                          {{ form.errors.get("password") }}
+                        </div>
+                      </div>
+                    </div>
 
-									</div>
-								</div>
-
-								<div class="form-row mb-2">
-									<div class="col-sm-10">
-										<label class="col-sm-6 col-form-label"for="email">Email</label>
-
-										<input 
-										name="email"
-										type="text"
-										class="form-control"
-										id="email"
-										placeholder="Enter the Email"
-										v-model="data.email"
-										>
-
-									</div>
-								</div>
-								
-								<div class="form-row mb-2">
-									<div class="col-sm-10">
-										<label class="col-sm-6 col-form-label"for="password">password</label>
-
-										<input 
-										name="password"
-										type="text"
-										class="form-control"
-										id="password"
-										placeholder="Enter the password"
-										v-model="data.password"
-										>
-
-									</div>
-								</div>
-
-						
-
-								<div class="form-group row mt-4">
-									<div class="col-sm-10">
-
-										<!-- <button
-											type="submit" value="Submit" v-on:click="submit"
-											class="btn btn-primary m-1 mb-4 radius-30 px-5">
-											Save
-										</button>
-										<button type="submit" class="btn btn-primary">Submit</button> -->
-
-										<input type="submit"  @click.stop.prevent="addUser()"/>
-									</div>
-								</div>
-
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		</div>
-	</div>
-</div>
+                    <div class="form-group row mt-4">
+                      <div class="col-sm-10">
+                        <button
+                          type="submit"
+                          value="Submit"
+                          class="btn btn-primary m-1 mb-4 radius-30 px-5"
+                          :disabled="form.errors.any()"
+                        >
+                          Save
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import Alert from '../Alert'
-export default ({
-  
-    	data(){
-		return {
-			data : {
-				email: '',
-				name: '',
-				password:'',
-				
-			}, 
-			tags : [], 
-			alert:'',
-			index : -1, 
-			showDeleteModal: false, 
-			isDeleing : false,
-			deleteItem: {}, 
-			deletingIndex: -1, 
-			websiteSettings: []
+import Alert from "../Alert";
 
-		}
-	},
-
-	 methods: {
-		addUser() {
-			// console.log('fuck')
-		const { name, email , password } = this.data;
-		const opts = {
-			name, email , password 
-		};
-		// const {alert} = this
-		console.log(this.alert)
-		axios
-		.post('post/users' ,opts )
-		.then(response => {
-		this.users= response.data
-			console.log(response)
-			this.alert ='Success'
-               this.$router.push({path: '/users', query: {alert: 'Employee Added'}});
-
-		})
-		.catch(err=>{
-			console.log(err)
-			this.alert =err
-		})
-
-		}
+export default {
+  data() {
+    return {
+      form: new Form({
+        email: "",
+        name: "",
+        password: "",
+      }),
+      alert: "",
+      id:''
+    };
   },
-  	async created(){
-
-	if(this.$route.query.alert){
-        this.alert = this.$route.query.alert;
+  methods: {
+    onSubmit() {
+      if (this.$route.path.split('/')[2]) {
+        this.form
+          .put("/users")
+          .then((res) =>
+            this.$router.push({
+              path: "/get/users",
+              query: { alert: "Employee Updated" },
+            })
+          );
+      } else {
+        this.form
+          .post("/users")
+          .then((res) =>
+            this.$router.push({
+              path: "/get/users",
+              query: { alert: "Employee Added" },
+            })
+          );
       }
+    },
+  },
 
-	},
-    components: {
-        Alert,
+  async created() {
+    this.$route.query.alert ? (this.alert = this.$route.query.alert) : null;
+    if (this.$route.path.split('/')[2] ) {
+       this.id = this.$route.path.split('/')[2]
+    this.form
+          .get(`/users/${this.id}`)
+          .then( (res) =>{
+            this.form.email = res.email
+            this.form.name = res.name
+            console.log(res)
+            console.log(this.form)
+          });
     }
-
-})
+  },
+  components: {
+    Alert,
+  },
+};
 </script>

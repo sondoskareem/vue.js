@@ -26,7 +26,9 @@
     },
     "dependencies": {
         "vue-axios": "^3.2.4",
+        "vue-i18n": "^8.25.0",
         "vue-router": "^3.5.2",
-        "vue-simple-alert": "^1.1.1"
+        "vue-simple-alert": "^1.1.1",
+        "vuelidate": "^0.7.6"
     }
 }

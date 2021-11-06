@@ -20,10 +20,10 @@
                     <div class="menu-title">Dashbord</div>
                 </router-link>
             </li>
- 
+
 
             <li>
-                <router-link to="/users">
+                <router-link to="/get/users">
                     <div class="parent-icon icon-color-2"><i class='bx bx-category'></i></div>
                     <div class="menu-title">Patients</div>
                 </router-link>
@@ -42,15 +42,21 @@
                     <div class="menu-title">Patients</div>
                 </router-link>
             </li>
-           
-          
+
+
         </ul>
     </nav>
+
  </div>
 
-
 	<router-view/>
+
 
 </div>
 </template>
 
+<script>
+    export default {
+        name: "mainapp",
+    }
+</script>
