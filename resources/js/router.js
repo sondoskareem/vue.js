@@ -25,7 +25,7 @@ const routes=[
     },
 
     {
-        path:'/sessions/user/:id',
+        path:'/sessions',
         component:Sessions
     }
 

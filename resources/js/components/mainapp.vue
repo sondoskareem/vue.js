@@ -30,16 +30,16 @@
             </li>
 
              <li>
-                <router-link to="/table">
+                <router-link to="/sessions">
                     <div class="parent-icon icon-color-2"><i class='bx bx-category'></i></div>
-                    <div class="menu-title">Patients</div>
+                    <div class="menu-title">Sessions</div>
                 </router-link>
             </li>
 
              <li>
                 <router-link to="/table">
                     <div class="parent-icon icon-color-2"><i class='bx bx-category'></i></div>
-                    <div class="menu-title">Patients</div>
+                    <div class="menu-title">Doctors</div>
                 </router-link>
             </li>
 

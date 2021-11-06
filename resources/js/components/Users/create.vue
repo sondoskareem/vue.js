@@ -135,9 +135,10 @@ export default {
   },
   methods: {
     onSubmit() {
-      if (this.$route.path.split('/')[2]) {
+      if (this.id) {
+          console.log(this.id)
         this.form
-          .put("/users")
+          .put(`/users/${this.id}`)
           .then((res) =>
             this.$router.push({
               path: "/get/users",

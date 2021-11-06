@@ -2209,8 +2209,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     onSubmit: function onSubmit() {
       var _this = this;
 
-      if (this.$route.path.split('/')[2]) {
-        this.form.put("/users").then(function (res) {
+      if (this.id) {
+        console.log(this.id);
+        this.form.put("/users/".concat(this.id)).then(function (res) {
           return _this.$router.push({
             path: "/get/users",
             query: {
@@ -2535,7 +2536,7 @@ var routes = [{
   path: '/usercreate/:id',
   component: _components_Users_create_vue__WEBPACK_IMPORTED_MODULE_4__.default
 }, {
-  path: '/sessions/user/:id',
+  path: '/sessions',
   component: _components_Sessions_index_vue__WEBPACK_IMPORTED_MODULE_3__.default
 }];
 var routers = new vue_router__WEBPACK_IMPORTED_MODULE_1__.default({

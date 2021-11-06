@@ -202,12 +202,12 @@ var render = function() {
             _c(
               "li",
               [
-                _c("router-link", { attrs: { to: "/table" } }, [
+                _c("router-link", { attrs: { to: "/sessions" } }, [
                   _c("div", { staticClass: "parent-icon icon-color-2" }, [
                     _c("i", { staticClass: "bx bx-category" })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "menu-title" }, [_vm._v("Patients")])
+                  _c("div", { staticClass: "menu-title" }, [_vm._v("Sessions")])
                 ])
               ],
               1
@@ -221,7 +221,7 @@ var render = function() {
                     _c("i", { staticClass: "bx bx-category" })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "menu-title" }, [_vm._v("Patients")])
+                  _c("div", { staticClass: "menu-title" }, [_vm._v("Doctors")])
                 ])
               ],
               1

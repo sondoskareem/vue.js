@@ -37,7 +37,7 @@ class UserController extends Controller
 
     }
 
-    public function update(Request $request){
+    public function update(Request $request , $id){
         //  return $request->all();
         $this->validate($request , [
             'name' => 'nullable',
@@ -45,9 +45,10 @@ class UserController extends Controller
             'email' => 'nullable'
         ]);
 
+        $user = User::findOrFail($id);
         $data = $request->all();
         if($request->password) $data['password'] = Hash::make($request['password']);
-        $User = User::create($data);
+        $User = tap($user)->update($data);
 
         // return $data;
        return $User;
