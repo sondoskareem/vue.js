@@ -36,8 +36,13 @@ Route::post('users', [App\Http\Controllers\UserController::class, 'store'])->nam
 Route::put('users/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('Users.update');
 Route::delete('users/{id}', [App\Http\Controllers\UserController::class, 'delete'])->name('Users.update');
 
+Route::get('sections', [App\Http\Controllers\SectionController::class, 'index'])->name('Sections.index');
+Route::post('sections', [App\Http\Controllers\SectionController::class, 'store'])->name('Sections.index');
+Route::put('sections/{id}', [App\Http\Controllers\SectionController::class, 'edit'])->name('Sections.index');
+Route::delete('sections/{id}', [App\Http\Controllers\SectionController::class, 'delete'])->name('Sections.index');
 
 Route::get('sessions', [App\Http\Controllers\SessionController::class, 'index'])->name('Sessions.index');
+Route::get('sessions/{id}', [App\Http\Controllers\SessionController::class, 'show'])->name('Sessions.show');
 Route::post('sessions', [App\Http\Controllers\SessionController::class, 'store'])->name('Sessions.index');
 Route::put('sessions/{id}', [App\Http\Controllers\SessionController::class, 'edit'])->name('Sessions.index');
 Route::delete('sessions/{id}', [App\Http\Controllers\SessionController::class, 'delete'])->name('Sessions.index');

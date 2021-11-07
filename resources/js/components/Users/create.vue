@@ -159,15 +159,16 @@ export default {
   },
 
   async created() {
+       console.log('ss')
+
     this.$route.query.alert ? (this.alert = this.$route.query.alert) : null;
     if (this.$route.params.id ) {
        this.id = this.$route.params.id
+       console.log('ss')
     this.form
           .get(`/users/${this.id}`)
           .then( (res) =>{
-            this.form.email = res.email
-            this.form.name = res.name
-            console.log(res)
+            this.form= new Form(res)
             console.log(this.form)
           });
     }

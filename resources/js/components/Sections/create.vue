@@ -41,15 +41,15 @@
 
                     <div class="form-row mb-2">
                       <div class="col-sm-10">
-                        <label class="col-sm-6 col-form-label" for="section_id"
+                        <label class="col-sm-6 col-form-label" for="secion_id"
                           >Section</label
                         >
-                       <select class="form-control" v-model="form.section_id" @input="form.errors.clear('section_id')">
+                       <select class="form-control" v-model="form.secion_id" @input="form.errors.clear('secion_id')">
                             <option value="" selected disabled>Choose</option>
                             <option v-for="section in sections" :key="section.id" v-bind:value="section.id">{{ section.name }}</option>
                         </select>
                         <div
-                          v-if="form.errors.has('section_id')" class="text-danger mt-2"> {{ form.errors.get("section_id") }}
+                          v-if="form.errors.has('secion_id')" class="text-danger mt-2"> {{ form.errors.get("secion_id") }}
                         </div>
                       </div>
                     </div>
@@ -184,7 +184,6 @@ export default {
   },
   methods: {
     onSubmit() {
-        //Updating
       if (this.id) {
           console.log(this.id)
         this.form
@@ -196,7 +195,6 @@ export default {
             })
           );
       } else {
-          //Adding
           console.log(this.form)
         this.form
           .post("/sessions")
@@ -205,8 +203,7 @@ export default {
               path: "/get/sessions",
               query: { alert: "Session Added" },
             })
-          ).catch((err)=>console.log(err))
-          ;
+          );
       }
     },
   },
@@ -214,14 +211,10 @@ export default {
   async created() {
     this.$route.query.alert ? (this.alert = this.$route.query.alert) : null;
     if (this.$route.params.id ) {
-        this.id = this.$route.params.id
-        this.form.get(`/sessions/${this.id}`).
-        then( (res) =>{
-            this.form= new Form(res)
-        });
+    this.id = this.$route.params.id
+    this.form.get(`/sessions/${this.id}`).then( (res) =>{  });
+
     }
-
-
     this.form.get(`/users/`).then( (res) =>{this.users = res });
     this.form.get(`/sections/`).then( (res) =>{this.sections = res });
 

@@ -7,6 +7,8 @@ use App\Models\Section;
 use Str;
 use URL;
 use App\Traits\UploadTrait;
+use Exception;
+
 class SectionController extends Controller
 {
 
@@ -15,50 +17,35 @@ class SectionController extends Controller
 
     public function index(Request $request){
 
-        $Sections = Section::all();
-        return view('Section.index',[
-            'Sections' => $Sections,
-        ]);
+        $Sections = Section::where('status' ,'active')->get();
+        return $Sections;
     }
 
 
 
-    public function create()
-    {
-        if(request()->ajax()){
-            $data = new Section();
-            return response()->json(['result' => $data ]);
-        }
-
-    }
 
     public function store(Request $request){
 
-        $this->validateRequest($request);
+        try{
+            $this->validateRequest($request);
 
 
 
-        $data['description']=$request->description;
-        $data['image']=$request->image->store('section','public');
+            $data['name']=$request->name;
+            $data['image']=$request->image->store('section','public');
 
 
-        Section::create($data)->save();
+            Section::create($data)->save();
 
-        session()->flash('success' , __('success'));
+            return 'success';
+        }catch(\Throwable $th){
 
-
-        return  response()->json(['success' => __('success')]);
-    }
-
-
-    public function edit($id)
-    {
-        if(request()->ajax()){
-            $data = Section::findOrFail($id);
-            return response()->json(['result' => $data ]);
         }
 
     }
+
+
+
     public function update(Request $request)
     {
 
@@ -90,7 +77,7 @@ class SectionController extends Controller
 
     protected function validateRequest( $request, $options = ''  ){
         return $this->validate($request,[
-            'description' => $options.'required|string',
+            'name' => $options.'required|string',
             'image' => $options.'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
         ]);

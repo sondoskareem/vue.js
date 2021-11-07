@@ -9,11 +9,10 @@ use Illuminate\Database\Eloquent\softDeletes;
 class Section extends Model
 {
     use HasFactory;
-    use SoftDeletes;
 
     public $guarded = [];
 
-    
+
 
     public function getImageAttribute($value)
     {

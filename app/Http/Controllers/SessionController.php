@@ -48,12 +48,15 @@ class SessionController extends Controller
         }
     }
 
+    public function show($id){
+        $Session = Session::findOrFail($id);
+        return $Session;
 
+     }
 
     public function store(SessionRequest $request){
 
         // try{
-            $this->validateRequest($request);
 
             $data = $request->all();
 

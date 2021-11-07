@@ -8,12 +8,16 @@ import CreateUser from './components/Users/create.vue'
 import Sessions from './components/Sessions/index.vue'
 import PostSessions from './components/Sessions/create.vue'
 
+import Sections from './components/Sections/index.vue'
+import PostSections from './components/Sections/create.vue'
+
 const routes=[
     {
         path: '/',
         component: Vue.component('mainapp', () => import('./components/mainapp.vue')),
         name: 'welcome',
     },
+    /////////////User
     {
         path:'/get/users',
         component:Users
@@ -26,7 +30,7 @@ const routes=[
         path:'/usercreate/:id',
         component:CreateUser
     },
-
+    ////////////////Sessions
     {
         path:'/get/sessions',
         component:Sessions
@@ -34,7 +38,24 @@ const routes=[
     {
         path:'/post/sessions',
         component:PostSessions
-    }
+    },
+    {
+        path:'/post/sessions:id',
+        component:PostSessions
+    },
+    ///////////////Sections
+    {
+        path:'/get/secions',
+        component:Sections
+    },
+    {
+        path:'/post/sections',
+        component:PostSections
+    },
+    {
+        path:'/post/sections:id',
+        component:CreateUser
+    },
 
 ]
 
