@@ -1,18 +1,9 @@
 <template>
     <div class="page-wrapper">
         <div class="page-content-wrapper">
-        <div class="modal fade" id="delete"  role="dialog" >
-			<div class="modal-dialog">
-				<div class="modal-content card bg-primary radius-15">
-					<div class="card-body">
-						<h5 class="card-title text-white">Delete</h5>
-							<p class="text-white">Are you sure ?</p>
-							<button type="button" class="btn grey btn-secondary square box-shadow-3 text-white" data-dismiss="modal">close</button>
-							<button type="button" v-on:click="remove" class="btn btn-danger square box-shadow-3 text-white ">Delete</button>
-					</div>
-				</div>
-			</div>
-		</div>
+
+              <delete-model v-on:delete="remove"></delete-model>
+
             <div class="page-content">
                 <Alert v-if="alert" v-bind:message="alert" />
 
@@ -93,6 +84,7 @@
 
 <script>
 import Alert from "../Alert";
+import DeleteModel from '../DeleteModel.vue'
 export default {
     data() {
         return {
@@ -122,7 +114,8 @@ export default {
         }
     },
     components: {
-        Alert
+        Alert,
+        DeleteModel
     },
     async created() {
         if (this.$route.query.alert) {

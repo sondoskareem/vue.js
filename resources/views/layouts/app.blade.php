@@ -22,7 +22,7 @@
 	<link href="{{asset('app-assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" />
 	<link href="{{asset('app-assets/plugins/metismenu/css/metisMenu.min.css')}}" rel="stylesheet" />
 
-	
+
 	<link rel="stylesheet" href="{{asset('app-assets/css/dark-header.css')}}" />
 	<link rel="stylesheet" href="{{asset('app-assets/css/dark-theme.css')}}" />
 
@@ -40,10 +40,10 @@
 		.padding{
 			padding: 0px;
 		}
-	
+
 	</style>
 
-	
+
 	@if(app()->getLocale() == "ar")
 		<style>
 		@media screen and (max-width: 1024px )and (min-width: 300px ){
@@ -56,13 +56,13 @@
 				right: 0px;
 			}
 		}
-			
+
 		</style>
 	@endif
 </head>
 
 <body>
-	
+
     <div id="app">
 	<div class="wrapper" id="toggled" >
         <header class="top-header">
@@ -78,8 +78,8 @@
 					</div>
 						<a  href="javascript:;" class="toggle-btn ml-lg-auto " id="toggledbuttom" > <i class="bx bx-menu"></i>
 						</a>
-						
-					
+
+
 				</div>
 				<div class="right-topbar ml-auto">
 					<ul class="navbar-nav">
@@ -89,7 +89,7 @@
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                         @endif
-                        
+
                     @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -109,29 +109,29 @@
                             </div>
                         </li>
 						<li>
-							<ul class="nav-item dropdown">    
+							<ul class="nav-item dropdown">
 								<li class="dropdown dropdown-language nav-item">
 								  <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown"
 									  aria-haspopup="true" aria-expanded="false">
 									@php
 										$lang = LaravelLocalization::getLocalesOrder()
-									@endphp 
+									@endphp
 									{{$lang[LaravelLocalization::getCurrentLocale()]['native'] }}
 									<span class="selected-language"></span>
 								  </a>
 								  <div class="dropdown-menu" aria-labelledby="dropdown-flag">
 									@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-									  <a 
+									  <a
 										class="dropdown-item"
-										rel="alternate" 
-										hreflang="{{ $localeCode }}" 
+										rel="alternate"
+										hreflang="{{ $localeCode }}"
 										href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
 									  >
-										
+
 										  {{ $properties['native'] }}
-										
+
 									  </a>
-									@endforeach 
+									@endforeach
 								  </div>
 								</li>
 							  </ul>
@@ -142,9 +142,9 @@
 			</nav>
 		</header>
 
-  
 
- 
+
+
 	<main id="app">
 	@if(Auth::user())
 		<mainapp></mainapp>
@@ -155,12 +155,12 @@
     {{-- @include('include.footer') --}}
 		<!--                      Dashbourd                        -->
 		{{-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> --}}
-		
-		
-		
+
+
+
 	<script type="application/javascript" src="{{ mix('js/app.js') }}"></script>
 
-	
+
 <script src="{{asset('app-assets/js/jquery.min.js')}}"></script>
 <script src="{{asset('app-assets/js/popper.min.js')}}"></script>
 <script src="{{asset('app-assets/js/bootstrap.min.js')}}"></script>
@@ -203,16 +203,16 @@
 	@stack('script')
 
 	<script>
-	   
+
 
 		$("#toggledbuttom").click(function(){
 			$("#toggled").toggleClass("toggled");
 		});
-		
+
 	</script>
     <script>
 		if($('html')[0].lang == 'ar'){
-			
+
 			$("div").addClass("rtl-addition");
 			$("html").attr("dir", "rtl");
 			$(".right-topbar").addClass("mr-auto");

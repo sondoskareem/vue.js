@@ -1875,6 +1875,41 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DeleteModel.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DeleteModel.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'DeleteModel',
+  data: function data() {
+    return {};
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Sessions/create.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Sessions/create.vue?vue&type=script&lang=js& ***!
@@ -2136,6 +2171,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Alert */ "./resources/js/components/Alert.vue");
+/* harmony import */ var _DeleteModel_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../DeleteModel.vue */ "./resources/js/components/DeleteModel.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -2226,15 +2262,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -2268,7 +2296,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   components: {
-    Alert: _Alert__WEBPACK_IMPORTED_MODULE_1__.default
+    Alert: _Alert__WEBPACK_IMPORTED_MODULE_1__.default,
+    DeleteModel: _DeleteModel_vue__WEBPACK_IMPORTED_MODULE_2__.default
   },
   created: function created() {
     var _this2 = this;
@@ -2528,6 +2557,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Alert */ "./resources/js/components/Alert.vue");
+/* harmony import */ var _DeleteModel_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../DeleteModel.vue */ "./resources/js/components/DeleteModel.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -2613,15 +2643,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -2655,7 +2677,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   components: {
-    Alert: _Alert__WEBPACK_IMPORTED_MODULE_1__.default
+    Alert: _Alert__WEBPACK_IMPORTED_MODULE_1__.default,
+    DeleteModel: _DeleteModel_vue__WEBPACK_IMPORTED_MODULE_2__.default
   },
   created: function created() {
     var _this2 = this;
@@ -39238,6 +39261,45 @@ component.options.__file = "resources/js/components/Alert.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/DeleteModel.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/DeleteModel.vue ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _DeleteModel_vue_vue_type_template_id_bd39f7ba_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DeleteModel.vue?vue&type=template&id=bd39f7ba&scoped=true& */ "./resources/js/components/DeleteModel.vue?vue&type=template&id=bd39f7ba&scoped=true&");
+/* harmony import */ var _DeleteModel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DeleteModel.vue?vue&type=script&lang=js& */ "./resources/js/components/DeleteModel.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _DeleteModel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _DeleteModel_vue_vue_type_template_id_bd39f7ba_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _DeleteModel_vue_vue_type_template_id_bd39f7ba_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "bd39f7ba",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/DeleteModel.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/Sessions/create.vue":
 /*!*****************************************************!*\
   !*** ./resources/js/components/Sessions/create.vue ***!
@@ -39410,6 +39472,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/DeleteModel.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/DeleteModel.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteModel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DeleteModel.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DeleteModel.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteModel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/Sessions/create.vue?vue&type=script&lang=js&":
 /*!******************************************************************************!*\
   !*** ./resources/js/components/Sessions/create.vue?vue&type=script&lang=js& ***!
@@ -39487,6 +39565,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Alert_vue_vue_type_template_id_7b2bf401_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Alert_vue_vue_type_template_id_7b2bf401_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Alert.vue?vue&type=template&id=7b2bf401&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Alert.vue?vue&type=template&id=7b2bf401&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/DeleteModel.vue?vue&type=template&id=bd39f7ba&scoped=true&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/components/DeleteModel.vue?vue&type=template&id=bd39f7ba&scoped=true& ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteModel_vue_vue_type_template_id_bd39f7ba_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteModel_vue_vue_type_template_id_bd39f7ba_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteModel_vue_vue_type_template_id_bd39f7ba_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DeleteModel.vue?vue&type=template&id=bd39f7ba&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DeleteModel.vue?vue&type=template&id=bd39f7ba&scoped=true&");
 
 
 /***/ }),
@@ -39603,6 +39698,71 @@ var staticRenderFns = [
     )
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DeleteModel.vue?vue&type=template&id=bd39f7ba&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DeleteModel.vue?vue&type=template&id=bd39f7ba&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "modal fade", attrs: { id: "delete", role: "dialog" } },
+    [
+      _c("div", { staticClass: "modal-dialog" }, [
+        _c("div", { staticClass: "modal-content card bg-primary radius-15" }, [
+          _c("div", { staticClass: "card-body" }, [
+            _c("h5", { staticClass: "card-title text-white" }, [
+              _vm._v("Delete")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-white" }, [_vm._v("Are you sure ?")]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass:
+                  "btn grey btn-secondary square box-shadow-3 text-white",
+                attrs: { type: "button", "data-dismiss": "modal" }
+              },
+              [_vm._v("close")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-danger square box-shadow-3 text-white ",
+                attrs: { type: "button" },
+                on: {
+                  click: function($event) {
+                    return _vm.$emit("delete")
+                  }
+                }
+              },
+              [_vm._v("Delete")]
+            )
+          ])
+        ])
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -40114,201 +40274,165 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "page-wrapper" }, [
-    _c("div", { staticClass: "page-content-wrapper" }, [
-      _c(
-        "div",
-        { staticClass: "modal fade", attrs: { id: "delete", role: "dialog" } },
-        [
-          _c("div", { staticClass: "modal-dialog" }, [
+    _c(
+      "div",
+      { staticClass: "page-content-wrapper" },
+      [
+        _c("delete-model", { on: { delete: _vm.remove } }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "page-content" },
+          [
+            _vm.alert
+              ? _c("Alert", { attrs: { message: _vm.alert } })
+              : _vm._e(),
+            _vm._v(" "),
             _c(
               "div",
-              { staticClass: "modal-content card bg-primary radius-15" },
               [
-                _c("div", { staticClass: "card-body" }, [
-                  _c("h5", { staticClass: "card-title text-white" }, [
-                    _vm._v("Delete")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-white" }, [
-                    _vm._v("Are you sure ?")
-                  ]),
-                  _vm._v(" "),
+                _c("router-link", { attrs: { to: "/post/sessions" } }, [
                   _c(
                     "button",
                     {
-                      staticClass:
-                        "btn grey btn-secondary square box-shadow-3 text-white",
-                      attrs: { type: "button", "data-dismiss": "modal" }
+                      staticClass: "btn btn-primary m-1 mb-4 radius-30 px-5",
+                      attrs: { type: "button" }
                     },
-                    [_vm._v("close")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "btn btn-danger square box-shadow-3 text-white ",
-                      attrs: { type: "button" },
-                      on: { click: _vm.remove }
-                    },
-                    [_vm._v("Delete")]
+                    [
+                      _c("i", { staticClass: "bx bx-user mr-1" }),
+                      _vm._v("New Session\n                    ")
+                    ]
                   )
                 ])
-              ]
-            )
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "page-content" },
-        [
-          _vm.alert ? _c("Alert", { attrs: { message: _vm.alert } }) : _vm._e(),
-          _vm._v(" "),
-          _c(
-            "div",
-            [
-              _c("router-link", { attrs: { to: "/post/sessions" } }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-primary m-1 mb-4 radius-30 px-5",
-                    attrs: { type: "button" }
-                  },
-                  [
-                    _c("i", { staticClass: "bx bx-user mr-1" }),
-                    _vm._v("New Session\n                        ")
-                  ]
-                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-body" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _vm.sessions.length
+                  ? _c("div", { staticClass: "table-responsive" }, [
+                      _c(
+                        "table",
+                        {
+                          staticClass: "table table-striped table-bordered",
+                          staticStyle: { width: "100%" },
+                          attrs: { id: "example2" }
+                        },
+                        [
+                          _vm._m(1),
+                          _vm._v(" "),
+                          _c(
+                            "tbody",
+                            _vm._l(_vm.sessions, function(session, i) {
+                              return _c("tr", { key: i }, [
+                                _c("td", { staticClass: "text-center" }, [
+                                  _vm._v(_vm._s(session.id))
+                                ]),
+                                _vm._v(" "),
+                                _c("td", { staticClass: "text-center" }, [
+                                  _vm._v(_vm._s(session.user.name))
+                                ]),
+                                _vm._v(" "),
+                                _c("td", { staticClass: "text-center" }, [
+                                  _vm._v(_vm._s(session.user.email))
+                                ]),
+                                _vm._v(" "),
+                                _c("td", { staticClass: "text-center" }, [
+                                  _vm._v(_vm._s(session.date))
+                                ]),
+                                _vm._v(" "),
+                                _c("td", { staticClass: "text-center" }, [
+                                  _vm._v(_vm._s(session.status))
+                                ]),
+                                _vm._v(" "),
+                                _c("td", { staticClass: "text-center" }, [
+                                  _vm._v(_vm._s(session.total_price))
+                                ]),
+                                _vm._v(" "),
+                                _c("td", { staticClass: "text-center" }, [
+                                  _vm._v(_vm._s(session.paid_price))
+                                ]),
+                                _vm._v(" "),
+                                _c("td", { staticClass: "text-center" }, [
+                                  _vm._v(_vm._s(session.created_at))
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "td",
+                                  [
+                                    _c(
+                                      "router-link",
+                                      {
+                                        attrs: {
+                                          to: "/post/sessions/" + session.id
+                                        }
+                                      },
+                                      [
+                                        _c("a", { attrs: { href: "" } }, [
+                                          _c(
+                                            "button",
+                                            { staticStyle: { border: "none" } },
+                                            [
+                                              _c("i", {
+                                                staticClass: "bx bx-edit",
+                                                staticStyle: {
+                                                  "font-size": "12px",
+                                                  cursor: "pointer",
+                                                  "margin-right": "5px"
+                                                }
+                                              })
+                                            ]
+                                          )
+                                        ])
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass: "delete",
+                                        staticStyle: { border: "none" },
+                                        attrs: { type: "button" },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.toggleDelete(session.id)
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _c("i", {
+                                          staticClass: "bx bx-trash",
+                                          staticStyle: {
+                                            "font-size": "12px",
+                                            cursor: "pointer"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ])
+                            }),
+                            0
+                          )
+                        ]
+                      )
+                    ])
+                  : _vm._e()
               ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-body" }, [
-              _vm._m(0),
-              _vm._v(" "),
-              _c("hr"),
-              _vm._v(" "),
-              _vm.sessions.length
-                ? _c("div", { staticClass: "table-responsive" }, [
-                    _c(
-                      "table",
-                      {
-                        staticClass: "table table-striped table-bordered",
-                        staticStyle: { width: "100%" },
-                        attrs: { id: "example2" }
-                      },
-                      [
-                        _vm._m(1),
-                        _vm._v(" "),
-                        _c(
-                          "tbody",
-                          _vm._l(_vm.sessions, function(session, i) {
-                            return _c("tr", { key: i }, [
-                              _c("td", { staticClass: "text-center" }, [
-                                _vm._v(_vm._s(session.id))
-                              ]),
-                              _vm._v(" "),
-                              _c("td", { staticClass: "text-center" }, [
-                                _vm._v(_vm._s(session.user.name))
-                              ]),
-                              _vm._v(" "),
-                              _c("td", { staticClass: "text-center" }, [
-                                _vm._v(_vm._s(session.user.email))
-                              ]),
-                              _vm._v(" "),
-                              _c("td", { staticClass: "text-center" }, [
-                                _vm._v(_vm._s(session.date))
-                              ]),
-                              _vm._v(" "),
-                              _c("td", { staticClass: "text-center" }, [
-                                _vm._v(_vm._s(session.status))
-                              ]),
-                              _vm._v(" "),
-                              _c("td", { staticClass: "text-center" }, [
-                                _vm._v(_vm._s(session.total_price))
-                              ]),
-                              _vm._v(" "),
-                              _c("td", { staticClass: "text-center" }, [
-                                _vm._v(_vm._s(session.paid_price))
-                              ]),
-                              _vm._v(" "),
-                              _c("td", { staticClass: "text-center" }, [
-                                _vm._v(_vm._s(session.created_at))
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "td",
-                                [
-                                  _c(
-                                    "router-link",
-                                    {
-                                      attrs: {
-                                        to: "/post/sessions/" + session.id
-                                      }
-                                    },
-                                    [
-                                      _c("a", { attrs: { href: "" } }, [
-                                        _c(
-                                          "button",
-                                          { staticStyle: { border: "none" } },
-                                          [
-                                            _c("i", {
-                                              staticClass: "bx bx-edit",
-                                              staticStyle: {
-                                                "font-size": "12px",
-                                                cursor: "pointer",
-                                                "margin-right": "5px"
-                                              }
-                                            })
-                                          ]
-                                        )
-                                      ])
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "button",
-                                    {
-                                      staticClass: "delete",
-                                      staticStyle: { border: "none" },
-                                      attrs: { type: "button" },
-                                      on: {
-                                        click: function($event) {
-                                          return _vm.toggleDelete(session.id)
-                                        }
-                                      }
-                                    },
-                                    [
-                                      _c("i", {
-                                        staticClass: "bx bx-trash",
-                                        staticStyle: {
-                                          "font-size": "12px",
-                                          cursor: "pointer"
-                                        }
-                                      })
-                                    ]
-                                  )
-                                ],
-                                1
-                              )
-                            ])
-                          }),
-                          0
-                        )
-                      ]
-                    )
-                  ])
-                : _vm._e()
             ])
-          ])
-        ],
-        1
-      )
-    ])
+          ],
+          1
+        )
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = [
@@ -40672,189 +40796,155 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "page-wrapper" }, [
-    _c("div", { staticClass: "page-content-wrapper" }, [
-      _c(
-        "div",
-        { staticClass: "modal fade", attrs: { id: "delete", role: "dialog" } },
-        [
-          _c("div", { staticClass: "modal-dialog" }, [
+    _c(
+      "div",
+      { staticClass: "page-content-wrapper" },
+      [
+        _c("delete-model", { on: { delete: _vm.remove } }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "page-content" },
+          [
+            _vm.alert
+              ? _c("Alert", { attrs: { message: _vm.alert } })
+              : _vm._e(),
+            _vm._v(" "),
             _c(
               "div",
-              { staticClass: "modal-content card bg-primary radius-15" },
               [
-                _c("div", { staticClass: "card-body" }, [
-                  _c("h5", { staticClass: "card-title text-white" }, [
-                    _vm._v("Delete")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-white" }, [
-                    _vm._v("Are you sure ?")
-                  ]),
-                  _vm._v(" "),
+                _c("router-link", { attrs: { to: "/usercreate" } }, [
                   _c(
                     "button",
                     {
-                      staticClass:
-                        "btn grey btn-secondary square box-shadow-3 text-white",
-                      attrs: { type: "button", "data-dismiss": "modal" }
+                      staticClass: "btn btn-primary m-1 mb-4 radius-30 px-5",
+                      attrs: { type: "button" }
                     },
-                    [_vm._v("close")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "btn btn-danger square box-shadow-3 text-white ",
-                      attrs: { type: "button" },
-                      on: { click: _vm.remove }
-                    },
-                    [_vm._v("Delete")]
+                    [
+                      _c("i", { staticClass: "bx bx-user mr-1" }),
+                      _vm._v("New User\n                    ")
+                    ]
                   )
                 ])
-              ]
-            )
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "page-content" },
-        [
-          _vm.alert ? _c("Alert", { attrs: { message: _vm.alert } }) : _vm._e(),
-          _vm._v(" "),
-          _c(
-            "div",
-            [
-              _c("router-link", { attrs: { to: "/usercreate" } }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-primary m-1 mb-4 radius-30 px-5",
-                    attrs: { type: "button" }
-                  },
-                  [
-                    _c("i", { staticClass: "bx bx-user mr-1" }),
-                    _vm._v("New User\n                        ")
-                  ]
-                )
-              ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-body" }, [
-              _vm._m(0),
-              _vm._v(" "),
-              _c("hr"),
-              _vm._v(" "),
-              _vm.users.length
-                ? _c("div", { staticClass: "table-responsive" }, [
-                    _c(
-                      "table",
-                      {
-                        staticClass: "table table-striped table-bordered",
-                        staticStyle: { width: "100%" },
-                        attrs: { id: "example2" }
-                      },
-                      [
-                        _vm._m(1),
-                        _vm._v(" "),
-                        _c(
-                          "tbody",
-                          _vm._l(_vm.users, function(user, i) {
-                            return _c("tr", { key: i }, [
-                              _c("td", { staticClass: "text-center" }, [
-                                _vm._v(
-                                  "\n                                            " +
-                                    _vm._s(user.name) +
-                                    "\n                                        "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("td", { staticClass: "text-center" }, [
-                                _vm._v(
-                                  "\n                                            " +
-                                    _vm._s(user.email) +
-                                    "\n                                        "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("td", { staticClass: "text-center" }, [
-                                _vm._v(
-                                  "\n                                            " +
-                                    _vm._s(user.created_at) +
-                                    "\n                                        "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "td",
-                                [
-                                  _c(
-                                    "router-link",
-                                    { attrs: { to: "/usercreate/" + user.id } },
-                                    [
-                                      _c("a", { attrs: { href: "" } }, [
-                                        _c(
-                                          "button",
-                                          { staticStyle: { border: "none" } },
-                                          [
-                                            _c("i", {
-                                              staticClass: "bx bx-edit",
-                                              staticStyle: {
-                                                "font-size": "12px",
-                                                cursor: "pointer",
-                                                "margin-right": "5px"
-                                              }
-                                            })
-                                          ]
-                                        )
-                                      ])
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "button",
-                                    {
-                                      staticClass: "delete",
-                                      staticStyle: { border: "none" },
-                                      attrs: { type: "button" },
-                                      on: {
-                                        click: function($event) {
-                                          return _vm.toggleDelete(user.id)
-                                        }
-                                      }
-                                    },
-                                    [
-                                      _c("i", {
-                                        staticClass: "bx bx-trash",
-                                        staticStyle: {
-                                          "font-size": "12px",
-                                          cursor: "pointer"
-                                        }
-                                      })
-                                    ]
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-body" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _vm.users.length
+                  ? _c("div", { staticClass: "table-responsive" }, [
+                      _c(
+                        "table",
+                        {
+                          staticClass: "table table-striped table-bordered",
+                          staticStyle: { width: "100%" },
+                          attrs: { id: "example2" }
+                        },
+                        [
+                          _vm._m(1),
+                          _vm._v(" "),
+                          _c(
+                            "tbody",
+                            _vm._l(_vm.users, function(user, i) {
+                              return _c("tr", { key: i }, [
+                                _c("td", { staticClass: "text-center" }, [
+                                  _vm._v(
+                                    "\n                                        " +
+                                      _vm._s(user.name) +
+                                      "\n                                    "
                                   )
-                                ],
-                                1
-                              )
-                            ])
-                          }),
-                          0
-                        )
-                      ]
-                    )
-                  ])
-                : _vm._e()
+                                ]),
+                                _vm._v(" "),
+                                _c("td", { staticClass: "text-center" }, [
+                                  _vm._v(
+                                    "\n                                        " +
+                                      _vm._s(user.email) +
+                                      "\n                                    "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("td", { staticClass: "text-center" }, [
+                                  _vm._v(
+                                    "\n                                        " +
+                                      _vm._s(user.created_at) +
+                                      "\n                                    "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "td",
+                                  [
+                                    _c(
+                                      "router-link",
+                                      {
+                                        attrs: { to: "/usercreate/" + user.id }
+                                      },
+                                      [
+                                        _c("a", { attrs: { href: "" } }, [
+                                          _c(
+                                            "button",
+                                            { staticStyle: { border: "none" } },
+                                            [
+                                              _c("i", {
+                                                staticClass: "bx bx-edit",
+                                                staticStyle: {
+                                                  "font-size": "12px",
+                                                  cursor: "pointer",
+                                                  "margin-right": "5px"
+                                                }
+                                              })
+                                            ]
+                                          )
+                                        ])
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass: "delete",
+                                        staticStyle: { border: "none" },
+                                        attrs: { type: "button" },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.toggleDelete(user.id)
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _c("i", {
+                                          staticClass: "bx bx-trash",
+                                          staticStyle: {
+                                            "font-size": "12px",
+                                            cursor: "pointer"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ])
+                            }),
+                            0
+                          )
+                        ]
+                      )
+                    ])
+                  : _vm._e()
+              ])
             ])
-          ])
-        ],
-        1
-      )
-    ])
+          ],
+          1
+        )
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = [
